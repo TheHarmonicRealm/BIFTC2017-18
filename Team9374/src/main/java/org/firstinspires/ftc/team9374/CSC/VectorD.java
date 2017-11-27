@@ -29,7 +29,7 @@ public class VectorD {
     public VectorD(Gamepad gamepad, int stick) {
         if (stick == 0) {
             x = -gamepad.left_stick_x;
-            y = -gamepad.left_stick_y;
+            y = gamepad.left_stick_y;
         } else if (stick == 1) {
             x = -gamepad.right_stick_x;
             y = -gamepad.right_stick_y;
@@ -56,7 +56,7 @@ public class VectorD {
     public void getController(Gamepad gamepad, int stick) {
         if (stick == 0) {
             x = -gamepad.left_stick_x;
-            y = -gamepad.left_stick_y;
+            y = gamepad.left_stick_y;
         } else if (stick == 1) {
             x = -gamepad.right_stick_x;
             y = -gamepad.right_stick_y;
@@ -134,5 +134,11 @@ public class VectorD {
         x = 0;
         y = 0;
         z = 0;
+    }
+
+    public void mult(double a) {
+        x *= a;
+        y *= a;
+        z *= a;
     }
 }
