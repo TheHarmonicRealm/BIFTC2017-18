@@ -16,8 +16,6 @@ public class TeleOp_HDrive extends OpMode {
     @Override
     public void init() {
         HDriveBadRobot.init(hardwareMap);
-
-
     }
     //Comment line below.
     boolean wasBumper = false;
